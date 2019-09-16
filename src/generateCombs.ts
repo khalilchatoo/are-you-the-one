@@ -6,18 +6,18 @@ export const generateCombs = (pairs: IDPair[], pairStringToIdMap: Record<string,
     const combinations: Combination[] = [];
     const namesForCombs: string[] = [...names];
     
-    const noMatchIds: number[] = noMatchPairs.map((noMatchPair) => {
-        let noMatchId: number;
-        
-        pairs.forEach(({ pair, id }) => {
-          if (eqSet(noMatchPair, pair)) {
-            noMatchId = id;
-            return;
-          }
-        });
-
-        return noMatchId;
-    });
+    const noMatchIds: Set<number> = new Set(
+        noMatchPairs.map((noMatchPair) => {
+            let noMatchId: number;
+            pairs.forEach(({ pair, id }) => {
+                if (eqSet(noMatchPair, pair)) {
+                    noMatchId = id;
+                    return;
+                }
+            });
+            return noMatchId;
+        })
+    );
 
     const generate = (unpairedNames: string[], builtPairs: Combination) => {
         if (!unpairedNames.length) {
@@ -34,8 +34,7 @@ export const generateCombs = (pairs: IDPair[], pairStringToIdMap: Record<string,
             builtPairs.push(pair);
             const pairString = generatePairString(pair);
             const setId = pairStringToIdMap[pairString];
-
-            if (!noMatchIds.includes(setId)) {
+            if (!noMatchIds.has(setId)) {
                 generate(copy, builtPairs);
             } 
         });
