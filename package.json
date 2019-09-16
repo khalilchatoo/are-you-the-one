@@ -1,0 +1,24 @@
+{
+  "name": "are-you-the-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "areYouTheOne.js",
+  "scripts": {
+    "start": "nodemon src/areYouTheOne.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khalilchatoo/are-you-the-one.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khalilchatoo/are-you-the-one/issues"
+  },
+  "homepage": "https://github.com/khalilchatoo/are-you-the-one#readme",
+  "devDependencies": {
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  }
+}
