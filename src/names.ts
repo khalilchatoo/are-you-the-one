@@ -1,6 +1,8 @@
-import { Pair } from "./types";
+import { Pair, Combination } from "./types";
+import { generatePairString } from "./helpers";
+import { generatePairs } from "./generatePairs";
 
-enum n {
+export enum n {
     Nour = "Nour",
     Remy = "Remy",
     Justin = "Justin",
@@ -52,4 +54,9 @@ export const noMatchPairs: Pair[] = [
     new Set([n.Remy, n.Basit]),
     new Set([n.Nour, n.Amber]),
     new Set([n.Nour, n.Justin])
+];
+
+export const perfectMatches: Pair[] = [
+    new Set([n.Aasha, n.Brandon]),
+    new Set([n.Basit, n.Jonathan])
 ];

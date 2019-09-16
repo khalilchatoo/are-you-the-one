@@ -5,7 +5,7 @@ import { names } from "./names";
 export const generatePairs = () => {
     const namesForPairs: string[] = [...names];
     const pairs: IDPair[] = [];
-    const pairsMap: Record<number, Pair> = {};
+    const pairsMap: Record<number, string> = {};
     const pairStringToIdMap: Record<string, number> = {};
     let id = 0;
 
@@ -17,7 +17,7 @@ export const generatePairs = () => {
             pair.add(val);
             pair.add(second);
             pairs.push({ id, pair });
-            pairsMap[id] = pair;
+            pairsMap[id] = generatePairString(pair);
             pairStringToIdMap[generatePairString(pair)] = id;
             id++;
           })
