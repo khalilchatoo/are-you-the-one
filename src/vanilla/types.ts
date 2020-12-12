@@ -6,9 +6,9 @@ export enum Bitch {
   Jessica = "Jessica", // pretty face ugly shorts
   Brittany = "Brittany", // crazy hot and crazy
   Jacy = "Jacy", // needs toner
-  Ashleigh = "Ashleigh", // good friend
+  Coleysia = "Coleysia", // good friend
   Simone = "Simone", // will tell you to shut up
-  Coleysia = "Coleysia", // the girl with no screen time
+  Ashleigh = "Ashleigh", // the girl with no screen time
 }
 
 export const bitches: Bitch[] = [
@@ -57,5 +57,5 @@ export interface Couple {
 
 export interface Ceremony {
   numberOfMatches: number;
-  couples: Couple[];
+  couples: string[];
 }

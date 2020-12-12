@@ -1,56 +1,58 @@
 import { Bitch, Fuckboi, Couple, Ceremony } from "./types";
 
-export const noMatchPairs: Couple[] = [
-  {
-    bitch: Bitch.Shanley,
-    fuckboi: Fuckboi.Chris,
-  },
+export const noMatchPairs: string[] = [
+  `${Bitch.Shanley}_${Fuckboi.Chris}`,
+  `${Bitch.Jessica}_${Fuckboi.Ethan}`,
+  `${Bitch.Simone}_${Fuckboi.John}`,
+  `${Bitch.Jessica}_${Fuckboi.Dillan}`,
 ];
 
-export const perfectMatches: Couple[] = [];
+export const perfectMatches: string[] = [];
 
-export const ceremony1: Ceremony = {
-  numberOfMatches: 2,
-  couples: [
-    {
-      bitch: Bitch.Kayla,
-      fuckboi: Fuckboi.Wes,
-    },
-    {
-      bitch: Bitch.Shanley,
-      fuckboi: Fuckboi.Ethan,
-    },
-    {
-      bitch: Bitch.Brittany,
-      fuckboi: Fuckboi.Adam,
-    },
-    {
-      bitch: Bitch.Jacy,
-      fuckboi: Fuckboi.Dre,
-    },
-    {
-      bitch: Bitch.Simone,
-      fuckboi: Fuckboi.John,
-    },
-    {
-      bitch: Bitch.Jessica,
-      fuckboi: Fuckboi.Chris,
-    },
-    {
-      bitch: Bitch.Paige,
-      fuckboi: Fuckboi.Joey,
-    },
-    {
-      bitch: Bitch.Ashleigh,
-      fuckboi: Fuckboi.Chris,
-    },
-    {
-      bitch: Bitch.Amber,
-      fuckboi: Fuckboi.Ryan,
-    },
-    {
-      bitch: Bitch.Coleysia,
-      fuckboi: Fuckboi.Dillan,
-    },
-  ],
-};
+export const ceremonies: Ceremony[] = [
+  {
+    numberOfMatches: 2,
+    couples: [
+      `${Bitch.Kayla}_${Fuckboi.Wes}`,
+      `${Bitch.Shanley}_${Fuckboi.Ethan}`,
+      `${Bitch.Brittany}_${Fuckboi.Adam}`,
+      `${Bitch.Jacy}_${Fuckboi.Dre}`,
+      `${Bitch.Simone}_${Fuckboi.John}`,
+      `${Bitch.Jessica}_${Fuckboi.Chris}`,
+      `${Bitch.Paige}_${Fuckboi.Joey}`,
+      `${Bitch.Ashleigh}_${Fuckboi.Chris}`,
+      `${Bitch.Amber}_${Fuckboi.Ryan}`,
+      `${Bitch.Coleysia}_${Fuckboi.Dillan}`,
+    ],
+  },
+  {
+    numberOfMatches: 4,
+    couples: [
+      `${Bitch.Jacy}_${Fuckboi.John}`,
+      `${Bitch.Jessica}_${Fuckboi.Dillan}`,
+      `${Bitch.Paige}_${Fuckboi.Chris}`,
+      `${Bitch.Simone}_${Fuckboi.Scali}`,
+      `${Bitch.Shanley}_${Fuckboi.Adam}`,
+      `${Bitch.Coleysia}_${Fuckboi.Wes}`,
+      `${Bitch.Amber}_${Fuckboi.Ethan}`,
+      `${Bitch.Brittany}_${Fuckboi.Joey}`,
+      `${Bitch.Kayla}_${Fuckboi.Ryan}`,
+      `${Bitch.Ashleigh}_${Fuckboi.Dre}`,
+    ],
+  },
+  {
+    numberOfMatches: 2,
+    couples: [
+      `${Bitch.Coleysia}_${Fuckboi.Dillan}`, // REPEAT 1
+      `${Bitch.Jessica}_${Fuckboi.John}`,
+      `${Bitch.Kayla}_${Fuckboi.Ryan}`, // REPEAT 2
+      `${Bitch.Amber}_${Fuckboi.Ethan}`, // REPEAT 2
+      `${Bitch.Ashleigh}_${Fuckboi.Dre}`, // REPEAT 2
+      `${Bitch.Simone}_${Fuckboi.Chris}`,
+      `${Bitch.Brittany}_${Fuckboi.Adam}`, // REPEAT 1
+      `${Bitch.Paige}_${Fuckboi.Scali}`,
+      `${Bitch.Shanley}_${Fuckboi.Joey}`,
+      `${Bitch.Jacy}_${Fuckboi.Wes}`,
+    ],
+  },
+];
