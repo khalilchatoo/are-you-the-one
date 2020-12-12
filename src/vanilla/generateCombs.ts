@@ -1,50 +1,38 @@
-import { names, noMatchPairs } from "./names";
-import { Combination, Pair, IDPair } from "./types";
-import { generatePairString, eqSet } from "./helpers";
-import * as path from 'path';
+import { Bitch, bitches, Fuckboi, fuckbois, Couple } from "./types";
 
-export const generateCombs = (pairs: IDPair[], pairStringToIdMap: Record<string, number>) => {
-    const combinations: Combination[] = [];
-    const namesForCombs: string[] = [...names];
-    
-    const noMatchIds: Set<number> = new Set(
-        noMatchPairs.map((noMatchPair) => {
-            let noMatchId: number;
-            pairs.forEach(({ pair, id }) => {
-                if (eqSet(noMatchPair, pair)) {
-                    noMatchId = id;
-                    return;
-                }
-            });
-            return noMatchId;
-        })
+export function generateCombinations(
+  bitches: Bitch[],
+  fuckbois: Fuckboi[],
+  pairings: Couple[] = [],
+  combinations: Couple[][] = []
+): Couple[][] {
+  if (bitches.length === 0) {
+    return [pairings];
+  }
+
+  const bitch: Bitch = bitches[0];
+  const leftOverBitches: Bitch[] = bitches.slice(1);
+  return fuckbois.reduce((acc, fuckboi, i) => {
+    const couple = {
+      bitch,
+      fuckboi,
+    };
+    const leftOverFuckBois: Fuckboi[] = [
+      ...fuckbois.slice(0, i),
+      ...fuckbois.slice(i + 1),
+    ];
+    const res = generateCombinations(
+      leftOverBitches,
+      leftOverFuckBois,
+      [...pairings, couple],
+      combinations
     );
 
-    const generate = (unpairedNames: string[], builtPairs: Combination) => {
-        if (!unpairedNames.length) {
-            combinations.push(builtPairs);
-            builtPairs = [];
-            return;
-        }
-        const n = unpairedNames.pop();
-        unpairedNames.forEach((val) => {
-            const copy = [...unpairedNames];
-            const pair: Pair = new Set();
-            pair.add(n);
-            pair.add(val);
-            copy.splice(copy.indexOf(val), 1);
-            const pairString = generatePairString(pair);
-            const setId = pairStringToIdMap[pairString];
-            const newBuiltPairs: Combination = [...builtPairs, setId];
-            if (!noMatchIds.has(setId)) {
-                generate(copy, newBuiltPairs);
-            } 
-        });
-    }
-
-    generate(namesForCombs, []);
-
-    return {
-        combinations
-    }
+    return [...acc, ...res];
+  }, []);
 }
+
+console.log(
+  " END RESULT: ",
+  JSON.stringify(generateCombinations(bitches, fuckbois))
+);
