@@ -4,7 +4,8 @@
   "description": "",
   "main": "areYouTheOne.js",
   "scripts": {
-    "start": "nodemon src/areYouTheOne.js",
+    "startqueer": "nodemon src/queer/areYouTheOne.js",
+    "start:vanilla": "nodemon src/vanilla/areYouTheOne.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,8 @@
     "@types/node": "^12.7.5",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.6"
   }
 }
