@@ -17,11 +17,11 @@ export const bitches: Bitch[] = [
   Bitch.Kayla,
   Bitch.Amber,
   Bitch.Jessica,
-  // Bitch.Brittany,
-  // Bitch.Jacy,
-  // Bitch.Ashleigh,
-  // Bitch.Simone,
-  // Bitch.Coleysia,
+  Bitch.Brittany,
+  Bitch.Jacy,
+  Bitch.Ashleigh,
+  Bitch.Simone,
+  Bitch.Coleysia,
 ];
 
 export enum Fuckboi {
@@ -43,11 +43,11 @@ export const fuckbois: Fuckboi[] = [
   Fuckboi.Dre,
   Fuckboi.Ryan,
   Fuckboi.Ethan,
-  // Fuckboi.Dillan,
-  // Fuckboi.Chris,
-  // Fuckboi.John,
-  // Fuckboi.Wes,
-  // Fuckboi.Joey,
+  Fuckboi.Dillan,
+  Fuckboi.Chris,
+  Fuckboi.John,
+  Fuckboi.Wes,
+  Fuckboi.Joey,
 ];
 
 export interface Couple {
