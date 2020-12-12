@@ -1,6 +1,5 @@
 {
   "watch": ["src"],
   "ext": "ts",
-  "ignore": ["src/**/*.spec.ts"],
-  "exec": "ts-node ./src/vanilla/areYouTheOne.ts"
+  "ignore": ["src/**/*.spec.ts"]
 }

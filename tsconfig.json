@@ -1,5 +1,5 @@
 {
-    "compilerOptions": {
+  "compilerOptions": {
     "target": "es6",
     "lib": ["es6", "es7", "es2018", "es2019", "dom"]
   }
