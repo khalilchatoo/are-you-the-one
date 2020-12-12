@@ -85,8 +85,18 @@ var file = fs.createWriteStream("occurrences.csv");
 file.on("error", function (err) {
   console.log(err);
 });
+let i = 1;
 for (let couple in occurrences) {
-  file.write(`${couple},${occurrences[couple]}\n`);
+  file.write(
+    `${couple}, ${occurrences[couple]}, ${(
+      100 *
+      (occurrences[couple] / stringCombinations.length)
+    ).toFixed(2)}%\n`
+  );
+  if (i % 10 === 0) {
+    file.write(`\n`);
+  }
+  i++;
 }
 file.end();
 console.log("FINISHED WRITING TO OCCURANCES");
