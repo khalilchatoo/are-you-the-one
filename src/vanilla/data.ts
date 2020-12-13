@@ -5,9 +5,11 @@ export const noMatchPairs: string[] = [
   `${Bitch.Jessica}_${Fuckboi.Ethan}`,
   `${Bitch.Simone}_${Fuckboi.John}`,
   `${Bitch.Jessica}_${Fuckboi.Dillan}`,
+  `${Bitch.Jessica}_${Fuckboi.Dillan}`,
+  `${Bitch.Ashleigh}_${Fuckboi.Dre}`,
 ];
 
-export const perfectMatches: string[] = [];
+export const perfectMatches: string[] = [`${Bitch.Coleysia}_${Fuckboi.Dillan}`];
 
 export const ceremonies: Ceremony[] = [
   {
@@ -68,6 +70,21 @@ export const ceremonies: Ceremony[] = [
       `${Bitch.Ashleigh}_${Fuckboi.Chris}`, // REPEAT  no idea
       `${Bitch.Shanley}_${Fuckboi.John}`, // no
       `${Bitch.Jacy}_${Fuckboi.Joey}`, // no idea
+    ],
+  },
+  {
+    numberOfMatches: 5,
+    couples: [
+      `${Bitch.Coleysia}_${Fuckboi.Dillan}`, // yes
+      `${Bitch.Amber}_${Fuckboi.Ethan}`, // no
+      `${Bitch.Jessica}_${Fuckboi.Joey}`, // no
+      `${Bitch.Kayla}_${Fuckboi.Wes}`, // no
+      `${Bitch.Jacy}_${Fuckboi.John}`, // yes
+      `${Bitch.Simone}_${Fuckboi.Scali}`, // yes
+      `${Bitch.Shanley}_${Fuckboi.Adam}`, // yes
+      `${Bitch.Paige}_${Fuckboi.Chris}`, // no
+      `${Bitch.Brittany}_${Fuckboi.Dre}`, // yes
+      `${Bitch.Ashleigh}_${Fuckboi.Ryan}`, // no
     ],
   },
 ];

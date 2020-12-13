@@ -1,6 +1,6 @@
 import * as fs from "fs";
 
-import { noMatchPairs, ceremonies } from "../vanilla/data";
+import { noMatchPairs, ceremonies, perfectMatches } from "../vanilla/data";
 import { Bitch, bitches, Fuckboi, fuckbois, Ceremony } from "./types";
 import { intersection } from "lodash";
 
@@ -38,12 +38,17 @@ export function generateCombinations(
 }
 
 function filterByCeremonies(combinations: string[][]): string[][] {
-  return combinations.filter((comb: string[]) =>
-    ceremonies.every(
-      (ceremony: Ceremony) =>
-        intersection(comb, ceremony.couples).length === ceremony.numberOfMatches
+  return combinations
+    .filter((comb: string[]) =>
+      ceremonies.every(
+        (ceremony: Ceremony) =>
+          intersection(comb, ceremony.couples).length ===
+          ceremony.numberOfMatches
+      )
     )
-  );
+    .filter((combs: string[]) =>
+      perfectMatches.every((perfectMatch) => combs.includes(perfectMatch))
+    );
 }
 
 const stringCombinations: string[][] = filterByCeremonies(
