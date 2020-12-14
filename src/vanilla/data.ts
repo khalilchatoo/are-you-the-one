@@ -7,6 +7,7 @@ export const noMatchPairs: string[] = [
   `${Bitch.Jessica}_${Fuckboi.Dillan}`,
   `${Bitch.Jessica}_${Fuckboi.Dillan}`,
   `${Bitch.Ashleigh}_${Fuckboi.Dre}`,
+  `${Bitch.Kayla}_${Fuckboi.Ryan}`,
 ];
 
 export const perfectMatches: string[] = [
@@ -101,6 +102,21 @@ export const ceremonies: Ceremony[] = [
       `${Bitch.Simone}_${Fuckboi.Joey}`, // no
       `${Bitch.Jessica}_${Fuckboi.Ryan}`,
       `${Bitch.Amber}_${Fuckboi.Ethan}`,
+      `${Bitch.Coleysia}_${Fuckboi.Dillan}`,
+      `${Bitch.Paige}_${Fuckboi.Chris}`,
+    ],
+  },
+  {
+    numberOfMatches: 7,
+    couples: [
+      `${Bitch.Kayla}_${Fuckboi.Wes}`,
+      `${Bitch.Jacy}_${Fuckboi.Scali}`,
+      `${Bitch.Shanley}_${Fuckboi.Adam}`,
+      `${Bitch.Amber}_${Fuckboi.Ethan}`,
+      `${Bitch.Jessica}_${Fuckboi.Joey}`, // no
+      `${Bitch.Simone}_${Fuckboi.Dre}`,
+      `${Bitch.Ashleigh}_${Fuckboi.Ryan}`, // no
+      `${Bitch.Brittany}_${Fuckboi.John}`, // no
       `${Bitch.Coleysia}_${Fuckboi.Dillan}`,
       `${Bitch.Paige}_${Fuckboi.Chris}`,
     ],
