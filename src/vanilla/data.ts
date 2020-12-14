@@ -90,7 +90,25 @@ export const ceremonies: Ceremony[] = [
       `${Bitch.Ashleigh}_${Fuckboi.Ryan}`, // no
     ],
   },
+  {
+    numberOfMatches: 5,
+    couples: [
+      `${Bitch.Jacy}_${Fuckboi.John}`,
+      `${Bitch.Kayla}_${Fuckboi.Wes}`,
+      `${Bitch.Shanley}_${Fuckboi.Dre}`, // lol no
+      `${Bitch.Brittany}_${Fuckboi.Scali}`, // lol no
+      `${Bitch.Ashleigh}_${Fuckboi.Adam}`,
+      `${Bitch.Simone}_${Fuckboi.Joey}`, // no
+      `${Bitch.Jessica}_${Fuckboi.Ryan}`,
+      `${Bitch.Amber}_${Fuckboi.Ethan}`,
+      `${Bitch.Coleysia}_${Fuckboi.Dillan}`,
+      `${Bitch.Paige}_${Fuckboi.Chris}`,
+    ],
+  },
 ];
 
 //ALYSSAS FINAL PREDICTION:
 // Shanley_Adam,	Paige_Joey,	Kayla_Ryan,	Amber_Chris,	Jessica_Wes,	Brittany_Dre,	Jacy_John,	Ashleigh_Ethan,	Simone_Scali,	Coleysia_Dillan
+
+/// SECOND PREDICTION:
+// Shanley_Adam,	Paige_Chris,	Kayla_Wes,	Amber_Ethan,	Jessica_Ryan,	Brittany_Joey,	Jacy_Scali,	Ashleigh_John,	Simone_Dre,	Coleysia_Dillan
