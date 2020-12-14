@@ -99,7 +99,7 @@ for (let couple in occurrences) {
     ).toFixed(2)}%\n`
   );
   if (i % 10 === 0) {
-    file.write(`\n`);
+    file.write(`-------\n`);
   }
   i++;
 }

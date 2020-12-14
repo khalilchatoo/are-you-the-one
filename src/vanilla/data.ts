@@ -9,7 +9,10 @@ export const noMatchPairs: string[] = [
   `${Bitch.Ashleigh}_${Fuckboi.Dre}`,
 ];
 
-export const perfectMatches: string[] = [`${Bitch.Coleysia}_${Fuckboi.Dillan}`];
+export const perfectMatches: string[] = [
+  `${Bitch.Coleysia}_${Fuckboi.Dillan}`,
+  `${Bitch.Paige}_${Fuckboi.Chris}`,
+];
 
 export const ceremonies: Ceremony[] = [
   {
