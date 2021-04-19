@@ -69,7 +69,6 @@ const generateBitchesWithChristina = (bitches: Bitch[]) => {
   return final;
 };
 
-// const stringCombinations = generateCombinations(bitches, fuckbois);
 // const stringCombinations: string[][] = filterByCeremonies(
 //   generateCombinations(bitches, fuckbois)
 // );
