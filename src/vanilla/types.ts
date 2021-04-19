@@ -1,53 +1,54 @@
 export enum Bitch {
-  Shanley = "Shanley", // mean brunette
-  Paige = "Paige", // blonde southern with nice tits
-  Kayla = "Kayla", // popular romantic
-  Amber = "Amber", // the one julia doesnt like
-  Jessica = "Jessica", // pretty face ugly shorts
-  Brittany = "Brittany", // crazy hot and crazy
-  Jacy = "Jacy", // needs toner
-  Coleysia = "Coleysia", // good friend
-  Simone = "Simone", // will tell you to shut up
-  Ashleigh = "Ashleigh", // the girl with no screen time
+  Jasmine = "Jasmine",
+  Jenni = "Jenni", // small town MN
+  Tyler = "Tyler",
+  Jessica = "Jessica", // make up face
+  Paris = "Paris",
+  Briana = "Briana", // broken nose
+  Ellie = "Ellie", // will tell you to shut up
+  Alexandria = "Alexandria", // forgotten azn gurl
+  Ashley = "Ashley", // no view time
+  Christina = "Christina", // ruined the algo
+  Shelby = "Shelby", // whomst
 }
 
-export const bitches: Bitch[] = [
-  Bitch.Shanley,
-  Bitch.Paige,
-  Bitch.Kayla,
-  Bitch.Amber,
+export const bitchesWithoutChristina: Bitch[] = [
+  Bitch.Jasmine,
+  Bitch.Jenni,
+  Bitch.Tyler,
   Bitch.Jessica,
-  Bitch.Brittany,
-  Bitch.Jacy,
-  Bitch.Ashleigh,
-  Bitch.Simone,
-  Bitch.Coleysia,
+  Bitch.Paris,
+  Bitch.Briana,
+  Bitch.Alexandria,
+  Bitch.Ellie,
+  Bitch.Ashley,
+  Bitch.Shelby,
 ];
 
 export enum Fuckboi {
-  Adam = "Adam", // insecure fuckboi
-  Scali = "Scali", // blue eyes brooklyn
-  Dre = "Dre", // big dick
-  Ryan = "Ryan", // jaw line
-  Ethan = "Ethan", // pretty boy face
-  Dillan = "Dillan", // slim shady
-  Chris = "Chris", // ugly douche tattoo
-  John = "John", // fucking goof
-  Wes = "Wes", // friendzone
-  Joey = "Joey", // the guy with no screen time
+  Brandon = "Brandon", // vegas skinny fucc boi
+  Alex = "Alex",
+  Layton = "Layton", // smol town big boi
+  Anthony = "Anthony", // Parker
+  TylerPratt = "TylerPratt", // goofy sci fi nerd
+  Curtis = "Curtis",
+  John = "John", // broke bri's nose
+  Garland = "Garland", // friendzone
+  Dario = "Dario", // no view time
+  Nathan = "Nathan", // smol tattoo'd dude
 }
 
 export const fuckbois: Fuckboi[] = [
-  Fuckboi.Adam,
-  Fuckboi.Scali,
-  Fuckboi.Dre,
-  Fuckboi.Ryan,
-  Fuckboi.Ethan,
-  Fuckboi.Dillan,
-  Fuckboi.Chris,
+  Fuckboi.Brandon,
+  Fuckboi.Alex,
+  Fuckboi.Layton,
+  Fuckboi.Anthony,
+  Fuckboi.TylerPratt,
+  Fuckboi.Curtis,
   Fuckboi.John,
-  Fuckboi.Wes,
-  Fuckboi.Joey,
+  Fuckboi.Garland,
+  Fuckboi.Dario,
+  Fuckboi.Nathan,
 ];
 
 export interface Couple {

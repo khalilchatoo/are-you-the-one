@@ -1,7 +1,13 @@
 import * as fs from "fs";
 
 import { noMatchPairs, ceremonies, perfectMatches } from "../vanilla/data";
-import { Bitch, bitches, Fuckboi, fuckbois, Ceremony } from "./types";
+import {
+  Bitch,
+  bitchesWithoutChristina,
+  Fuckboi,
+  fuckbois,
+  Ceremony,
+} from "./types";
 import { intersection } from "lodash";
 
 export function generateCombinations(
@@ -51,57 +57,69 @@ function filterByCeremonies(combinations: string[][]): string[][] {
     );
 }
 
-const stringCombinations: string[][] = filterByCeremonies(
-  generateCombinations(bitches, fuckbois)
-);
-
-console.log("stringCombinations: ", stringCombinations.length);
-
-var file = fs.createWriteStream("season_1_combinations_expanded.csv");
-file.on("error", function (err) {
-  console.log(err);
-});
-file.write(`${bitches.join(",\t")}\n`);
-stringCombinations.forEach((comb) => {
-  file.write(`${comb.join(",\t")}\n`);
-});
-file.end();
-console.log("FINISHED WRITING TO COMBO");
-
-function getOccurrences(combinations: string[][]): Record<string, number> {
-  const allPairsObj: Record<string, number> = {};
-  bitches.forEach((bitch) => {
-    fuckbois.forEach((fuckboi) => {
-      allPairsObj[`${bitch}_${fuckboi}`] = 0;
-    });
-  });
-
-  combinations.forEach((combo) => {
-    combo.forEach((couple) => {
-      allPairsObj[couple] = allPairsObj[couple] + 1;
-    });
-  });
-  return allPairsObj;
-}
-
-const occurrences: Record<string, number> = getOccurrences(stringCombinations);
-
-var file = fs.createWriteStream("occurrences.csv");
-file.on("error", function (err) {
-  console.log(err);
-});
-let i = 1;
-for (let couple in occurrences) {
-  file.write(
-    `${couple}, ${occurrences[couple]}, ${(
-      100 *
-      (occurrences[couple] / stringCombinations.length)
-    ).toFixed(2)}%\n`
-  );
-  if (i % 10 === 0) {
-    file.write(`-------\n`);
+const generateBitchesWithChristina = (bitches: Bitch[]) => {
+  const xtina = Bitch.Christina;
+  const final = [];
+  for (let i = 0; i < 10; i++) {
+    const temp = [...bitches];
+    temp[i] = xtina;
+    console.log(temp.length);
+    final.push(temp);
   }
-  i++;
-}
-file.end();
-console.log("FINISHED WRITING TO OCCURANCES");
+  return final;
+};
+
+// const stringCombinations = generateCombinations(bitches, fuckbois);
+// const stringCombinations: string[][] = filterByCeremonies(
+//   generateCombinations(bitches, fuckbois)
+// );
+
+// console.log("stringCombinations: ", stringCombinations.length);
+
+// var file = fs.createWriteStream("season_2_combinations_expanded.csv");
+// file.on("error", function (err) {
+//   console.log(err);
+// });
+// file.write(`${bitches.join(",\t")}\n`);
+// stringCombinations.forEach((comb) => {
+//   file.write(`${comb.join(",\t")}\n`);
+// });
+// file.end();
+// console.log("FINISHED WRITING TO COMBO");
+
+// function getOccurrences(combinations: string[][]): Record<string, number> {
+//   const allPairsObj: Record<string, number> = {};
+//   bitches.forEach((bitch) => {
+//     fuckbois.forEach((fuckboi) => {
+//       allPairsObj[`${bitch}_${fuckboi}`] = 0;
+//     });
+//   });
+
+//   combinations.forEach((combo) => {
+//     combo.forEach((couple) => {
+//       allPairsObj[couple] = allPairsObj[couple] + 1;
+//     });
+//   });
+//   return allPairsObj;
+// }
+
+// const occurrences: Record<string, number> = getOccurrences(stringCombinations);
+
+// var file = fs.createWriteStream("occurrences.csv");
+// file.on("error", function (err) {
+//   console.log(err);
+// });
+// let i = 1;
+// for (let couple in occurrences) {
+//   file.write(
+//     `${couple}, ${occurrences[couple]}, ${(
+//       100 *
+//       (occurrences[couple] / stringCombinations.length)
+//     ).toFixed(2)}%\n`
+//   );
+//   if (i % 10 === 0) {
+//     file.write(`-------\n`);
+//   }
+//   i++;
+// }
+// file.end();
