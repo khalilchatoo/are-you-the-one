@@ -26,6 +26,7 @@ export function generateCombinations(
   return fuckbois.reduce((acc, fuckboi, i) => {
     const couple: string = `${bitch}_${fuckboi}`;
     if (noMatchPairs.includes(couple)) {
+      // TODO
       return acc;
     }
 
@@ -47,16 +48,33 @@ export function generateCombinations(
 function divideWithChristina(
   combinationsWithoutChristina: string[][]
 ): string[][] {
-  return combinationsWithoutChristina.reduce(
-    (combs: string[][], combWithout: string[]) => {
-      let combWith: string[][] = combWithout.map((couple) => {
-        const [_, fuckBoi]: string[] = couple.split("_");
-        return [...combWithout, `${Bitch.Christina}_${fuckBoi}`];
-      });
+  const combs = [];
 
-      return [...combs, ...combWith];
-    },
-    []
+  combinationsWithoutChristina.forEach((combWithout: string[]) => {
+    combWithout.forEach((couple) => {
+      const [_, fuckBoi]: string[] = couple.split("_");
+      const christinaPair: string = `${Bitch.Christina}_${fuckBoi}`;
+      const newCombination = [...combWithout, christinaPair];
+      if (
+        !noMatchPairs.includes(christinaPair) &&
+        isCombinationValid(newCombination)
+      ) {
+        combs.push(newCombination);
+      }
+    });
+  });
+
+  return combs;
+}
+
+function isCombinationValid(combination: string[]): boolean {
+  return (
+    ceremonies.every(
+      (ceremony: Ceremony) =>
+        intersection(combination, ceremony.couples).length ===
+        ceremony.numberOfMatches
+    ) &&
+    perfectMatches.every((perfectMatch) => combination.includes(perfectMatch))
   );
 }
 
@@ -78,11 +96,16 @@ const combinationsWithoutChristina = generateCombinations(
   bitchesWithoutChristina,
   fuckbois
 );
-const combinations = divideWithChristina(combinationsWithoutChristina);
 
-console.log("combinations: ", combinations);
+console.log(
+  "FINISHED COMB WITHOUT CHRISTINA ",
+  combinationsWithoutChristina.length
+);
+const combinations = divideWithChristina(combinationsWithoutChristina);
+console.log("FINISHED COMB WITH CHRISTINA", combinations.length);
 
 const stringCombinations: string[][] = filterByCeremonies(combinations);
+console.log("FINISHED FILTERING BY CEREMONIES");
 
 var file = fs.createWriteStream("season_2_combinations_expanded.csv");
 file.on("error", function (err) {
