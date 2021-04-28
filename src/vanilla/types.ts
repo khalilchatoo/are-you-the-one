@@ -25,12 +25,26 @@ export const bitchesWithoutChristina: Bitch[] = [
   Bitch.Shelby,
 ];
 
+export const bitches: Bitch[] = [
+  Bitch.Jasmine,
+  Bitch.Jenni,
+  Bitch.Tyler,
+  Bitch.Jessica,
+  Bitch.Paris,
+  Bitch.Briana,
+  Bitch.Alexandria,
+  Bitch.Ellie,
+  Bitch.Ashley,
+  Bitch.Shelby,
+  Bitch.Christina,
+];
+
 export enum Fuckboi {
   Brandon = "Brandon", // vegas skinny fucc boi
   Alex = "Alex",
   Layton = "Layton", // smol town big boi
   Anthony = "Anthony", // Parker
-  TylerPratt = "TylerPratt", // goofy sci fi nerd
+  Pratt = "Pratt", // goofy sci fi nerd
   Curtis = "Curtis",
   John = "John", // broke bri's nose
   Garland = "Garland", // friendzone
@@ -43,7 +57,7 @@ export const fuckbois: Fuckboi[] = [
   Fuckboi.Alex,
   Fuckboi.Layton,
   Fuckboi.Anthony,
-  Fuckboi.TylerPratt,
+  Fuckboi.Pratt,
   Fuckboi.Curtis,
   Fuckboi.John,
   Fuckboi.Garland,

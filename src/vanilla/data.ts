@@ -11,7 +11,7 @@ export const ceremonies: Ceremony[] = [
       `${Bitch.Jenni}_${Fuckboi.Layton}`,
       `${Bitch.Ashley}_${Fuckboi.Dario}`,
       `${Bitch.Jenni}_${Fuckboi.Layton}`,
-      `${Bitch.Paris}_${Fuckboi.TylerPratt}`,
+      `${Bitch.Paris}_${Fuckboi.Pratt}`,
       `${Bitch.Briana}_${Fuckboi.Curtis}`,
       `${Bitch.Christina}_${Fuckboi.Brandon}`,
       `${Bitch.Jasmine}_${Fuckboi.John}`,
