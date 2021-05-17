@@ -1,7 +1,6 @@
 import { names, noMatchPairs } from "./names";
 import { Combination, Pair, IDPair } from "./types";
 import { generatePairString, eqSet } from "./helpers";
-import * as path from 'path';
 
 export const generateCombs = (pairs: IDPair[], pairStringToIdMap: Record<string, number>) => {
     const combinations: Combination[] = [];
