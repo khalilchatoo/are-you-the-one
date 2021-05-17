@@ -4,9 +4,17 @@ export const noMatchPairs: string[] = [
   `${Bitch.Jessica}_${Fuckboi.Brandon}`,
   `${Bitch.Christina}_${Fuckboi.Brandon}`,
   `${Bitch.Alexandria}_${Fuckboi.Brandon}`,
+  `${Bitch.Christina}_${Fuckboi.Pratt}`,
+  `${Bitch.Christina}_${Fuckboi.Curtis}`,
+  `${Bitch.Jasmine}_${Fuckboi.John}`,
+  `${Bitch.Christina}_${Fuckboi.John}`,
 ];
 
-export const perfectMatches: string[] = [];
+export const perfectMatches: string[] = [
+  `${Bitch.Paris}_${Fuckboi.Pratt}`,
+  `${Bitch.Shelby}_${Fuckboi.Curtis}`,
+  `${Bitch.Jenni}_${Fuckboi.John}`,
+];
 
 export const ceremonies: Ceremony[] = [
   {
@@ -52,6 +60,66 @@ export const ceremonies: Ceremony[] = [
       `${Bitch.Jasmine}_${Fuckboi.Alex}`,
       `${Bitch.Jenni}_${Fuckboi.Anthony}`,
       `${Bitch.Ellie}_${Fuckboi.Layton}`,
+    ],
+  },
+  {
+    numberOfMatches: 1,
+    couples: [
+      `${Bitch.Paris}_${Fuckboi.Pratt}`,
+      `${Bitch.Ellie}_${Fuckboi.Brandon}`,
+      `${Bitch.Jenni}_${Fuckboi.Anthony}`,
+      `${Bitch.Briana}_${Fuckboi.Curtis}`,
+      `${Bitch.Tyler}_${Fuckboi.Alex}`,
+      `${Bitch.Shelby}_${Fuckboi.Dario}`,
+      `${Bitch.Alexandria}_${Fuckboi.Nathan}`,
+      `${Bitch.Jasmine}_${Fuckboi.Garland}`,
+      `${Bitch.Jessica}_${Fuckboi.Layton}`,
+      `${Bitch.Christina}_${Fuckboi.John}`,
+    ],
+  },
+  {
+    numberOfMatches: 3,
+    couples: [
+      `${Bitch.Paris}_${Fuckboi.Pratt}`,
+      `${Bitch.Shelby}_${Fuckboi.Curtis}`,
+      `${Bitch.Ashley}_${Fuckboi.Anthony}`,
+      `${Bitch.Jasmine}_${Fuckboi.Brandon}`,
+      `${Bitch.Tyler}_${Fuckboi.Garland}`,
+      `${Bitch.Jenni}_${Fuckboi.John}`,
+      `${Bitch.Briana}_${Fuckboi.Layton}`,
+      `${Bitch.Christina}_${Fuckboi.Alex}`,
+      `${Bitch.Jessica}_${Fuckboi.Nathan}`,
+      `${Bitch.Alexandria}_${Fuckboi.Dario}`,
+    ],
+  },
+  {
+    numberOfMatches: 2,
+    couples: [
+      `${Bitch.Paris}_${Fuckboi.Pratt}`,
+      `${Bitch.Shelby}_${Fuckboi.Curtis}`,
+      `${Bitch.Ashley}_${Fuckboi.Brandon}`,
+      `${Bitch.Jasmine}_${Fuckboi.Nathan}`,
+      `${Bitch.Briana}_${Fuckboi.Dario}`,
+      `${Bitch.Ellie}_${Fuckboi.Anthony}`,
+      `${Bitch.Tyler}_${Fuckboi.Garland}`,
+      `${Bitch.Jenni}_${Fuckboi.Layton}`,
+      `${Bitch.Jessica}_${Fuckboi.Alex}`,
+      `${Bitch.Jasmine}_${Fuckboi.Nathan}`,
+    ],
+  },
+  {
+    numberOfMatches: 6,
+    couples: [
+      `${Bitch.Paris}_${Fuckboi.Pratt}`,
+      `${Bitch.Shelby}_${Fuckboi.Curtis}`,
+      `${Bitch.Jenni}_${Fuckboi.John}`,
+      `${Bitch.Ashley}_${Fuckboi.Dario}`,
+      `${Bitch.Jasmine}_${Fuckboi.Alex}`,
+      `${Bitch.Ellie}_${Fuckboi.Layton}`,
+      `${Bitch.Tyler}_${Fuckboi.Brandon}`,
+      `${Bitch.Briana}_${Fuckboi.Anthony}`,
+      `${Bitch.Christina}_${Fuckboi.Nathan}`,
+      `${Bitch.Jessica}_${Fuckboi.Garland}`,
     ],
   },
 ];

@@ -26,7 +26,6 @@ export function generateCombinations(
   return fuckbois.reduce((acc, fuckboi, i) => {
     const couple: string = `${bitch}_${fuckboi}`;
     if (noMatchPairs.includes(couple)) {
-      // TODO
       return acc;
     }
 
